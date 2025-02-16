@@ -24,7 +24,7 @@ public class CheckoutCommand {
 
     @NotEmpty
     @Size(min = 2, max = 50)
-    private String city;
+    private String notice;
 
     @NotEmpty
     @Size(min = 2, max = 2)
@@ -67,11 +67,11 @@ public class CheckoutCommand {
     }
 
     public String getCity() {
-        return city;
+        return notice;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setCity(String notice) {
+        this.notice = notice;
     }
 
     public String getStateCode() {

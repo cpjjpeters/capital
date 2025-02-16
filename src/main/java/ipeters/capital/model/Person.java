@@ -10,7 +10,7 @@ public class Person {
     private String status;
     private String phone;
     private String address;
-    private String city;
+    private String notice;
     private String country;
     private String postalCode;
     private String birthDate;

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layouts :: header"></head>
+
+<body>
+
+<nav th:replace="layouts :: navbar"></nav>
+
+<br>
+<div class="container">
+
+
+    <form th:action="@{/notices/save}" th:object="${notice}" method="POST">
+
+
+        <!--  This will be used to bind to the notice that was clicked on (USED FOR UPDATES)-->
+        <input type="hidden" th:field="${notice.noticeId}"/>
+
+        <h3>Enter City Information</h3>
+        <div class="form-group row">
+            <input type="text" placeholder="Name" th:field="${notice.noticeName}">
+            <span style="color:red" th:if="${#fields.hasErrors('noticeName')}"
+                  th:errors="${notice.noticeName}">
+			</span>
+        </div>
+
+        <div class="form-group row">
+            <input type="text" placeholder="Type" th:field="${notice.noticeType}">
+            <span style="color:red" th:if="${#fields.hasErrors('noticeType')}"
+                  th:errors="${notice.noticeType}">
+			</span>
+        </div>
+
+        <button class="btn btn-info col-2" type="submit">Save Notice</button>
+
+    </form>
+</div>
+
+</body>
+
+</html>

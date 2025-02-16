@@ -34,7 +34,11 @@ public class NoticeJpaPersistenceService implements NoticePersistenceFacade{
 
     @Override
     public List<Notice> findAll() {
-        return List.of();
+
+        return this.repository.findAll()
+                .stream()
+                .map(mapper::jpaEntityToModel)
+                .toList();
     }
 
     @Override
