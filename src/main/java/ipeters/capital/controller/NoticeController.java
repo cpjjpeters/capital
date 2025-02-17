@@ -34,7 +34,7 @@ public class NoticeController {
     public String showNewNotice(Model model) {
         log.debug("getmapping showNewNotice");
         Notice aNotice = new Notice();
-        model.addAttribute("notice", aNotice);
+        model.addAttribute("notice",aNotice);
         return "notice/new-notice";
     }
 

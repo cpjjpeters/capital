@@ -1,7 +1,7 @@
 package ipeters.capital.mapper;
 
 import ipeters.capital.model.Notice;
-import ipeters.capital.repository.NoticeJpaEntity;
+import ipeters.capital.entity.NoticeJpaEntity;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

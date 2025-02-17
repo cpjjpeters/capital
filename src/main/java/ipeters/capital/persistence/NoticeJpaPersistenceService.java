@@ -2,7 +2,7 @@ package ipeters.capital.persistence;
 
 import ipeters.capital.mapper.NoticeJpaDaoMapper;
 import ipeters.capital.model.Notice;
-import ipeters.capital.repository.NoticeJpaEntity;
+import ipeters.capital.entity.NoticeJpaEntity;
 import ipeters.capital.repository.NoticeJpaRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
