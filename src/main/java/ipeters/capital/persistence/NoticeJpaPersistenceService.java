@@ -11,8 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 /* carlpeters created on 16/02/2025 inside the package - ipeters.capital.persistence */
-@Slf4j
-@Service
+
 public class NoticeJpaPersistenceService implements NoticePersistenceFacade{
 
     private final NoticeJpaRepository repository;
