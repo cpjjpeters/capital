@@ -1,10 +1,12 @@
 package ipeters.capital.model;
 
+import ipeters.capital.config.OrderStatus;
+
 /* carlpeters created on 13/02/2025 inside the package - ipeters.capital.model */
 public class CPOrder {
     private Long orderId;
     private String orderType;
-    private String orderStatus;
+    private OrderStatus orderStatus;
     private String orderDate;
     private String orderTime;
     private String orderAmount;

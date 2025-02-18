@@ -1,6 +1,7 @@
 package ipeters.capital.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import ipeters.capital.config.NoticeType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ public class Notice {
     @JsonProperty("noticeId")
     private Long noticeId;
     @JsonProperty("noticeType")
-    private String noticeType;
+    private NoticeType noticeType;
     @JsonProperty("noticeName")
     private String noticeName;
 }

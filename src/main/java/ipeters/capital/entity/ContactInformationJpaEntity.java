@@ -1,14 +1,12 @@
 package ipeters.capital.entity;
 
-import ipeters.capital.config.OrderStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -16,37 +14,44 @@ import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.Instant;
 
-/* carlpeters created on 17/02/2025 inside the package - ipeters.capital.entity */
+/* carlpeters created on 18/02/2025 inside the package - ipeters.capital.entity */
 @Entity
-@Table(name = "CPORDER")
+@Table(name = "CONTACTINFORMATION")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CPOrderJpaEntity {
+public class ContactInformationJpaEntity {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
-    @Column(name = "ORDER_ID")
-    private Long orderId;
+    @Column(name = "CONTACT_ID")
+    private Long contactId;
     @CreatedDate
     @Column(name = "CREATED_DATE")
     private Instant createdDate = Instant.now();
     @LastModifiedDate
     @Column(name = "LASTMODIFIED_DATE")
     private Instant lastModifiedDate = Instant.now();
-    private String orderType;
-    @Enumerated(EnumType.STRING)
-    @Column(name = "ORDER_STATUS")
-    private OrderStatus orderStatus;
-    @Column(name = "ORDER_AMOUNT")
-    private String orderAmount;
-    @Column(name = "ORDER_PRICE")
-    private String orderPrice;
-    @Column(name = "ORDER_TOTAL")
-    private String orderTotal;
-    @Column(name = "ORDER_FEE")
-    private String orderFee;
+    @Column(name = "FIRSTNAME")
+    private String firstName;
+    @Column(name = "LASTNAME")
+    private String lastName;
+    @Column(name = "EMAIL")
+    private String email;
+    @Column(name = "PHONENUMBER")
+    private String phoneNumber;
+    @Column(name = "ADDRESS")
+    private String address;
+    @Column(name = "CITY")
+    private String city;
+    @Column(name = "STATE")
+    private String state;
+    @Column(name = "ZIP")
+    private String zip;
+    @Column(name = "COUNTRY")
+    private String country;
     @Column(name = "CREATED_BY")
     private String orderCreatedBy;
     @Column(name = "USERID_LASTCHANGE")
     private String userIdLastChange;
+
 }

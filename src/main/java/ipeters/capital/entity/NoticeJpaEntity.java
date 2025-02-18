@@ -1,7 +1,10 @@
 package ipeters.capital.entity;
 
+import ipeters.capital.config.NoticeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -19,9 +22,11 @@ import lombok.NoArgsConstructor;
 public class NoticeJpaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "NOTICE_ID")
     private Long noticeId;
+    @Enumerated(EnumType.STRING)
     @Column(name = "NOTICE_TYPE")
-    private String noticeType;
+    private NoticeType noticeType;
     @Column(name = "NOTICE_NAME")
     private String noticeName;
 
