@@ -1,4 +1,4 @@
-package ipeters.capital.persistence;
+package ipeters.capital.persistence.facade;
 
 import ipeters.capital.model.CPOrder;
 

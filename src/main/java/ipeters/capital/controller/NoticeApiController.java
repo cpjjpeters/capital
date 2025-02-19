@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 /* carlpeters created on 16/02/2025 inside the package - ipeters.capital.controller */
 @Slf4j
-@RestController
-@RequestMapping("app-api/notices")
+//@RestController
+//@RequestMapping("app-api/notices")
 public class NoticeApiController {
 
     private final NoticeService noticeService;

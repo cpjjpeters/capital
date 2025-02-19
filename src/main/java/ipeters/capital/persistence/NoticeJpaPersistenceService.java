@@ -3,21 +3,24 @@ package ipeters.capital.persistence;
 import ipeters.capital.mapper.NoticeJpaDaoMapper;
 import ipeters.capital.model.Notice;
 import ipeters.capital.entity.NoticeJpaEntity;
+import ipeters.capital.persistence.facade.NoticePersistenceFacade;
 import ipeters.capital.repository.NoticeJpaRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 /* carlpeters created on 16/02/2025 inside the package - ipeters.capital.persistence */
-
-public class NoticeJpaPersistenceService implements NoticePersistenceFacade{
+@Slf4j
+@Service
+public class NoticeJpaPersistenceService implements NoticePersistenceFacade {
 
     private final NoticeJpaRepository repository;
     private final NoticeJpaDaoMapper mapper;
 
-    public NoticeJpaPersistenceService(NoticeJpaRepository repository, NoticeJpaDaoMapper mapper) {
+    public NoticeJpaPersistenceService(NoticeJpaRepository repository, @Qualifier("noticeJpaDaoMapper") NoticeJpaDaoMapper mapper) {
         this.repository = repository;
         this.mapper = mapper;
     }

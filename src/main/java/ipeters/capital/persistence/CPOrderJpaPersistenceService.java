@@ -3,6 +3,7 @@ package ipeters.capital.persistence;
 import ipeters.capital.entity.CPOrderJpaEntity;
 import ipeters.capital.mapper.CPOrderJpaDaoMapper;
 import ipeters.capital.model.CPOrder;
+import ipeters.capital.persistence.facade.CPOrderJpaPersistenceFacade;
 import ipeters.capital.repository.CPOrderJpaRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
