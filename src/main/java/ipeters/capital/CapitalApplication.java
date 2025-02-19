@@ -3,7 +3,7 @@ package ipeters.capital;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "ipeters.capital")
 public class CapitalApplication {
 
 	public static void main(String[] args) {
