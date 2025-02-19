@@ -19,7 +19,7 @@ import java.time.Instant;
 
 /* carlpeters created on 19/02/2025 inside the package - ipeters.capital.entity */
 @Entity
-@Table(name = "USER")
+@Table(name = "CPUSER")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

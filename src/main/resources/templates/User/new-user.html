@@ -16,24 +16,27 @@
 
 
         <!--        &lt;!&ndash;  This will be used to bind to the user that was clicked on (USED FOR UPDATES)&ndash;&gt;-->
-        <!--        <input type="hidden" th:field="${aNotice.noticeId}"/>-->
+        <!--        <input type="hidden" th:field="${aUser.noticeId}"/>-->
 
-        <h3>Enter Notice Information</h3>
+        <h3>Enter User Information</h3>
         <div class="form-group row">
-            <input type="text" placeholder="noticeName" th:field="${user.noticeName}">
+            <input type="text" placeholder="userid"    th:field="${user.userid}">
             <!--            <span style="color:red" th:if="${#fields.hasErrors('noticeName')}"-->
             <!--                  th:errors="${user.noticeName}">-->
             <!--			</span>-->
         </div>
 
-        <div class="form-group row">
-            <input type="text" placeholder="noticeType" th:field="${user.noticeType}">
-            <!--            <span style="color:red" th:if="${#fields.hasErrors('noticeType')}"-->
-            <!--                  th:errors="${aNotice.noticeType}">-->
-            <!--			</span>-->
+<!--        <div class="form-group row">-->
+<!--            <input type="text" placeholder="userStatus" th:field="${user.userStatus}">-->
+<!--            &lt;!&ndash;            <span style="color:red" th:if="${#fields.hasErrors('noticeType')}"&ndash;&gt;-->
+<!--            &lt;!&ndash;                  th:errors="${aUser.noticeType}">&ndash;&gt;-->
+<!--            &lt;!&ndash;			</span>&ndash;&gt;-->
 
-        </div>
-
+<!--        </div>-->
+        <select th:field="${user.userStatus}">
+            <option value="INITIAL">INITIAL</option>
+            <option value="INACTIVE">INACTIVE</option>
+        </select>
         <button class="btn btn-info col-2" type="submit">Save User</button>
 
     </form>

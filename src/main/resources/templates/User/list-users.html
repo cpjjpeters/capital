@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layouts :: header"></head>
+
+<body>
+
+<nav th:replace="layouts :: navbar"></nav>
+
+<div class="container">
+    <h3>User Directory</h3>
+    <hr>
+
+    <!--Add New User Button -->
+    <a th:href="@{/user/new}"
+       class="btn btn-primary btn-sm mb-3">
+        Add User
+    </a>
+    <br></br>
+
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>Id </th>
+            <th>UserID</th>
+            <th>UserStatus</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="aUser : ${users}">
+            <td th:text="${aUser.id}"/>
+            <td th:text="${aUser.userid}"/>
+            <td th:text="${aUser.userStatus}"/>
+            <td>
+                <a th:href="@{/notice/update(id=${aUser.id})}"
+                   class="btn btn-info btn-sm">
+                    Update
+                </a>
+
+<!--                <a th:href="@{/user/delete(id=${aUser.id})}"-->
+<!--                   class="btn btn-danger btn-sm"-->
+<!--                   onClick="if (!(confirm('Are you sure you want to delete this User?'))) return false">-->
+<!--                    Delete-->
+<!--                </a>-->
+
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+</body>
+
+</html>
