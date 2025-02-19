@@ -13,11 +13,9 @@ import java.util.List;
 @Service
 public class NoticeService {
     private final NoticePersistenceFacade noticePersistenceFacade;
-    private final NoticeJpaDaoMapper noticeJpaDaoMapper;;
 
-    public NoticeService(NoticePersistenceFacade noticePersistenceFacade, NoticeJpaDaoMapper noticeJpaDaoMapper) {
+    public NoticeService(NoticePersistenceFacade noticePersistenceFacade) {
         this.noticePersistenceFacade = noticePersistenceFacade;
-        this.noticeJpaDaoMapper = noticeJpaDaoMapper;
     }
     public List<Notice> findAll() {
         return this.noticePersistenceFacade.findAll();

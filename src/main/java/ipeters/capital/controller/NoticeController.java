@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
 
-/* carlpeters created on 16/02/2025 inside the package - ipeters.capital.controller */
 @Slf4j
 @Controller
 @RequestMapping(value="/notice", produces = MediaType.APPLICATION_JSON_VALUE)
